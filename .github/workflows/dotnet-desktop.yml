@@ -40,7 +40,7 @@ jobs:
     # 还原 NuGet 包
     - name: Restore NuGet Packages
       run: |
-        dotnet restore ${{ github.workspace }}\${{ env.Solution_Name }}
+        nuget restore ${{ github.workspace }}\${{ env.Solution_Name }}
 
     # 构建项目
     - name: Build the application
